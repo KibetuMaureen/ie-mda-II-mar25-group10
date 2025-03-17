@@ -8,12 +8,34 @@ Five Counting stations have been permanently documenting cycling traffic on cent
 More details on the data source here: https://data.europa.eu/data/datasets/eco-counter-data-rhein-kreis-neuss?locale=en
 
 
-### Project files structure
+## Project Overview
+This project analyzes bicycle traffic data in the Rhine-Kreis Neuss region, Germany, leveraging real-time streaming, batch processing, and predictive analytics. By using big data technologies such as Apache Kafka, Apache Spark, and Hadoop, the system ingests, processes, and visualizes cycling trends to support urban planning and bike-sharing initiatives.
 
-Run the notebooks in this order:
+## Tech Stack
+- **Apache Kafka**: Streams real-time sensor data for processing.
+- **Apache Spark (PySpark)**: Performs both real-time streaming analytics and batch processing.
+- **Hadoop HDFS**: Stores processed data and machine learning models.
 
-1.   1_data_transformation_cycling_germany.ipynb
-2.   2_analysis_cycling_germany.ipynb
-3.   3_cycling_streaming_simulation.ipynb
-4.   4_cycling_stream_batching.ipynb
+## Workflow
+1. **Data Ingestion**: Sensor data is collected 
+2. **Real-Time Streaming**: Apache Kafka stores and streams the cycling data for real-time processing.
+3. **Batch Processing & ML Models**: Apache Spark processes the data to generate insights and forecasts.
+4. **Storage**: Data is stored in Hadoop HDFS for historical analysis.
 
+## Notebooks Overview
+1. **Data Transformation** (`1_data_transformation_cycling_germany.ipynb`):
+   - Cleans and normalizes raw cycling data.
+   - Extracts key time and location-based attributes.
+   - Stores structured data in HDFS.
+2. **Exploratory Data Analysis (EDA)** (`2_analysis_cycling_germany.ipynb`):
+   - Identifies trends in cycling patterns.
+   - Compares traffic across different stations and times.
+   - Prepares data for forecasting.
+3. **Streaming Simulation** (`3_cycling_streaming_simulation.ipynb`):
+   - Simulates real-time data ingestion using Apache Kafka.
+   - Validates the integrity of streaming messages.
+   - Logs and monitors real-time ingestion.
+4. **Batch Processing & Analytics** (`4_cycling_stream_batching.ipynb`):
+   - Processes streaming data using Spark Structured Streaming.
+   - Aggregates and analyzes traffic trends over time.
+   - Stores results for further visualization and ML modeling.
