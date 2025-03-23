@@ -22,6 +22,12 @@ This project analyzes bicycle traffic data in the Rhine-Kreis Neuss region, Germ
 3. **Batch Processing & ML Models**: Apache Spark processes the data to generate insights and forecasts.
 4. **Storage**: Data is stored in Hadoop HDFS for historical analysis.
 
+
+## Requirements:
+
+1. Hadoop should be running
+2. Dataset (eco-counter-data.csv) should be in this directory in hadoop: [g10_datalake/bronze/cycling/](hdfs://localhost:9000//g10_datalake/bronze/cycling/)
+
 ## Notebooks Overview
 1. **Data Transformation** (`1_data_transformation_cycling_germany.ipynb`):
    - Cleans and normalizes raw cycling data.
